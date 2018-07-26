@@ -6,7 +6,7 @@ A website for the community
 
 * Create virtual environment.
 
-`py -3 -m venv .venv36`
+`py -3.6 -m venv .venv36`
 
 * Install dependencies.
 
