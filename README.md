@@ -1,7 +1,8 @@
 # Community-Website
 
 A website for the community
-Current version of the frontend (https://neilchauhan2.github.io/Community-Website/)
+
+#### Current version of the frontend (https://neilchauhan2.github.io/Community-Website/)
 
 # Getting started
 
