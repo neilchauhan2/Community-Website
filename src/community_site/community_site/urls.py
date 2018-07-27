@@ -19,3 +19,7 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+admin.site.site_header = "NEIL & AMAAN"
+admin.site.site_title = "NEIL & AMAAN Admin Portal"
+admin.site.index_title = "Welcome to NEIL & AMAAN Researcher Portal"
