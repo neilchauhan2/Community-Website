@@ -2,6 +2,8 @@
 
 A website for the community
 
+#### Current version of the frontend (https://neilchauhan2.github.io/Community-Website/)
+
 # Getting started
 
 * Create virtual environment.
