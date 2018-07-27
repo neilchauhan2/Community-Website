@@ -14,3 +14,13 @@ A website for the community
 
 `pip install -r requirements.txt`
 
+# Starting the server
+cd `src\community_website\`
+
+`python manage.py makemigrations`
+
+`python manage.py migrate`
+
+`python manage.py runserver`
+
+
