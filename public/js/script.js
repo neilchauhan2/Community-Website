@@ -70,22 +70,22 @@ $(function () {
     
     $("#about").click(() => {
         toggleActive("about")
-        getAbout()
+        // getAbout()
     })
     
     $("#events").click(() => {
         toggleActive("events")
-        getEvents()
+        // getEvents()
     })
     
     $("#suggestions").click(() => {
         toggleActive("suggestions")
-        getSuggestions()
+        // getSuggestions()
     })
     
     $("#contact").click(() => {
         toggleActive("contact")
-        getContact()
+        // getContact()
     })
 })
     
