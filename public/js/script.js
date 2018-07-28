@@ -55,6 +55,66 @@ function getHome () {
            </div>
        </div>
    </div>
+
+   <!--Parallax-->
+    
+   <!--Welcome section-->
+   <div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-4">What We look for</h1>
+            </div>
+            <hr>
+            <div class="col-12">
+                <p class="lead">
+                    We aim to develop a community where people from all sorts of domains, be it Web development, Android, IOS, Machine Learning and AI, or any other domain can share their ideas, and learn new skills and technologies.
+                    There is no better way to learn, than to learn by contributing to a live project in an environment of like-minded peers.
+                    We are determined to create an environment where people can learn from their peers as well as share their knowledge with others, to create an environment of learning.       
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--icons-->
+    <div class="container-fluid padding">
+        <div class="row text-center padding">
+           <div class="col-12 social">
+               <i class="fab fa-node-js"></i>
+               <i class="fab fa-python"></i>
+               <i class="fab fa-android"></i>
+               <i class="fab fa-html5"></i>
+               <i class="fab fa-css3-alt"></i>
+               <i class="fab fa-js-square"></i>
+           </div>
+        </div>
+    </div>
+
+   
+   <!--Emoji-->
+   
+   <button class="fun btn btn-outline-secondary" data-toggle="collapse" data-target="#emoji">Click for Fun</button>
+   <div id="emoji" class="collapse">
+       <div class="container-fluid padding">
+           <div class="row text-center">
+               <div class="col-sm-6 col-md-3">
+                   <img src="public/img/gif/panda.gif" alt="" class="gif">
+               </div>
+               
+               <div class="col-sm-6 col-md-3">
+                   <img src="public/img/gif/poo.gif" alt="" class="gif">
+               </div>
+               
+               <div class="col-sm-6 col-md-3">
+                   <img src="public/img/gif/unicorn.gif" alt="" class="gif">
+               </div>
+               
+               <div class="col-sm-6 col-md-3">
+                   <img src="public/img/gif/chicken.gif" alt="" class="gif">
+               </div>
+           
+           </div>
+       </div>
+   </div>
    
        `)
 }

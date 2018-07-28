@@ -44,6 +44,46 @@ html, body{
     border-radius: 0;
 }
 
+.fun{
+    width: 100%;
+    margin: 1rem;
+}
+
+.gif{
+    max-width: 100%;
+}
+.fa-html5{
+    color: #e54d26;
+    font-size: 4em;
+    margin: 30px;
+}
+.fa-css3-alt{
+    color: #2163af;
+    font-size: 4em;
+    margin: 30px;
+}
+
+.fa-node-js{
+    color:green;
+    font-size: 4em;
+    margin: 30px;
+}
+.fa-android{
+    color: greenyellow;
+    font-size: 4em;
+    margin: 30px;
+}
+.fa-js-square{
+    color: goldenrod ;
+    font-size: 4em;
+    margin: 30px;
+}
+
+.fa-python{
+    color: #2163af;
+    font-size: 4em;
+    margin: 30px;
+}
 
 /*------Media Queries------*/
 
