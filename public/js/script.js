@@ -118,7 +118,7 @@ function getHome () {
 
    <!--footer-->
 
-   <footer>
+   <footer id="contactUs">
         <h3 class="text-center">Contact Us</h3>
         <p class="text-center">Email or Call us</p>
         <p class="text-center">Email: <strong>contact@opendev.test</strong></p>
@@ -140,6 +140,50 @@ function getHome () {
        `)
 }
 
+function getEvents(){
+    $("#container-events").append(`
+    <div class="container padding">
+    <div class="row welcome text-center">
+        <div class="col-12">
+            <h1 class="display-5">Intro to C programming</h1>
+        </div>
+        <hr>
+        <div class="col-12">
+            <h6 class="text-left ml-5 "> <b>Thursday, August 2, 2018</b> </h6>
+            <h6 class="text-left ml-5"> 10.30am - 12.30pm</h6>
+            <p class="lead ml-5">
+                We aim to develop a community where people from all sorts of domains, be it Web development, Android, IOS, Machine Learning and AI, or any other domain can share their ideas, and learn new skills and technologies.
+                There is no better way to learn, than to learn by contributing to a live project in an environment of like-minded peers.
+                We are determined to create an environment where people can learn from their peers as well as share their knowledge with others, to create an environment of learning.       
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--Contact Us-->
+
+<footer id="contactUs">
+<h3 class="text-center">Contact Us</h3>
+<p class="text-center">Email or Call us</p>
+<p class="text-center">Email: <strong>contact@opendev.test</strong></p>
+<p class="text-center">Phone: <strong>+91-7777777777</strong></p>
+
+<div class="container-fluid padding">
+    <div class="row text-center padding">
+        <div class="col-12 padding">
+            <a href="#"><i class="fab fa-facebook social" ></i></a>
+            <a href="#"><i class="fab fa-twitter social" ></i></a>
+            <a href="#"><i class="fab fa-google-plus-g social" ></i></a>
+            <a href="#"><i class="fab fa-instagram social" ></i></a>
+            <a href="#"><i class="fab fa-youtube social" ></i></a>
+        </div>
+    </div>
+</div>
+</footer>
+    `)
+}
+
+
 $(function () {
     toggleActive("home")
     getHome()
@@ -156,7 +200,7 @@ $(function () {
     
     $("#events").click(() => {
         toggleActive("events")
-        // getEvents()
+        getEvents()
     })
     
     $("#suggestions").click(() => {
@@ -164,9 +208,9 @@ $(function () {
         // getSuggestions()
     })
     
-    $("#contact").click(() => {
-        toggleActive("contact")
-        // getContact()
-    })
+    // $("#contact").click(() => {
+    //     toggleActive("contact")
+    //     // getContact()
+    // })
 })
     
