@@ -18,7 +18,7 @@ function getHome () {
            </ul>
            <div class="carousel-inner">
                <div class="carousel-item active">
-                   <img src="public/img/img-1.jpg" alt="">
+                   <img src="img/img-1.jpg" alt="">
                    <div class="carousel-caption">
                        <h1 class="display-3">Community Website</h1>
                        <h4>An Open Source Community</h4>
@@ -27,12 +27,12 @@ function getHome () {
                </div>
                <div class="carousel-inner">
                    <div class="carousel-item">
-                       <img src="public/img/img-2.jpg" alt="">
+                       <img src="img/img-2.jpg" alt="">
                    </div>
                    
                    <div class="carousel-inner">
                        <div class="carousel-item">
-                           <img src="public/img/img-3.jpeg" alt="">
+                           <img src="img/img-3.jpeg" alt="">
                        </div>
                    </div>
                </div>
@@ -97,19 +97,19 @@ function getHome () {
        <div class="container-fluid padding">
            <div class="row text-center">
                <div class="col-sm-6 col-md-3">
-                   <img src="public/img/gif/panda.gif" alt="" class="gif">
+                   <img src="img/gif/panda.gif" alt="" class="gif">
                </div>
                
                <div class="col-sm-6 col-md-3">
-                   <img src="public/img/gif/poo.gif" alt="" class="gif">
+                   <img src="img/gif/poo.gif" alt="" class="gif">
                </div>
                
                <div class="col-sm-6 col-md-3">
-                   <img src="public/img/gif/unicorn.gif" alt="" class="gif">
+                   <img src="img/gif/unicorn.gif" alt="" class="gif">
                </div>
                
                <div class="col-sm-6 col-md-3">
-                   <img src="public/img/gif/chicken.gif" alt="" class="gif">
+                   <img src="img/gif/chicken.gif" alt="" class="gif">
                </div>
            
            </div>
@@ -181,6 +181,52 @@ function getEvents(){
 </div>
 </footer>
     `)
+
+   
+}
+
+function getAbout(){
+    $("#container-about").append(`
+    <div class="container-fluid padding">
+    <div class="row padding">
+    <div class="col-lg-6" >
+        <h2>Our Mission</h2>
+        <hr>
+        <p class="lead">
+        We are a group of Computer Science Enthusiasts. We are always excited about new technologies and innovations, and look forward towards creating something in the field of Technology that can solve problems. We started off with our Computer Science degree in the year 2017, with the aim to fulfill our passion for Computer Science. So, throughout our first year we were looking for a place to share our ideas and to contribute to some Computer Science projects, but sadly we couldn't find one. This led us to the idea of establishing our own Community where people can learn from their peers, as all of us are good at something.  
+        So, with this community we aim at providing an environment to every Computer Science enthusiast, who is looking for a place to share ideas and learn. The community also aims at promoting Open Source Development, as contributing to Open Source projects is one of the best ways to learn. We would try our best to conduct regular workshops on latest technology to keep the community updated with latest technologies and practices.   
+        We look for people who are passionate about Computer Science, and would love to have them as part of the Communuty!
+        </p>
+    </div>
+
+        <div class="col-lg-6">
+            <img src="img/balloon.png" class="img-fluid svg" alt="">
+        </div>
+    
+    </div>
+    </div> 
+    
+    <!--Contact Us-->
+
+<footer id="contactUs">
+<h3 class="text-center">Contact Us</h3>
+<p class="text-center">Email or Call us</p>
+<p class="text-center">Email: <strong>contact@opendev.test</strong></p>
+<p class="text-center">Phone: <strong>+91-7777777777</strong></p>
+
+<div class="container-fluid padding">
+    <div class="row text-center padding">
+        <div class="col-12 padding">
+            <a href="#"><i class="fab fa-facebook social" ></i></a>
+            <a href="#"><i class="fab fa-twitter social" ></i></a>
+            <a href="#"><i class="fab fa-google-plus-g social" ></i></a>
+            <a href="#"><i class="fab fa-instagram social" ></i></a>
+            <a href="#"><i class="fab fa-youtube social" ></i></a>
+        </div>
+    </div>
+</div>
+</footer>
+    `)
 }
 
 
@@ -195,7 +241,7 @@ $(function () {
     
     $("#about").click(() => {
         toggleActive("about")
-        // getAbout()
+        getAbout()
     })
     
     $("#events").click(() => {
