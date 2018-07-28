@@ -78,13 +78,13 @@ function getHome () {
     <!--icons-->
     <div class="container-fluid padding">
         <div class="row text-center padding">
-           <div class="col-12 social">
-               <i class="fab fa-node-js"></i>
-               <i class="fab fa-python"></i>
-               <i class="fab fa-android"></i>
-               <i class="fab fa-html5"></i>
-               <i class="fab fa-css3-alt"></i>
-               <i class="fab fa-js-square"></i>
+           <div class="col-12 ">
+               <i class="fab fa-node-js icons"></i>
+               <i class="fab fa-python icons"></i>
+               <i class="fab fa-android icons"></i>
+               <i class="fab fa-html5 icons"></i>
+               <i class="fab fa-css3-alt icons"></i>
+               <i class="fab fa-js-square icons"></i>
            </div>
         </div>
     </div>
@@ -115,6 +115,27 @@ function getHome () {
            </div>
        </div>
    </div>
+
+   <!--footer-->
+
+   <footer>
+        <h3 class="text-center">Contact Us</h3>
+        <p class="text-center">Email or Call us</p>
+        <p class="text-center">Email: <strong>contact@opendev.test</strong></p>
+        <p class="text-center">Phone: <strong>+91-7777777777</strong></p>
+
+        <div class="container-fluid padding">
+            <div class="row text-center padding">
+                <div class="col-12 padding">
+                    <a href="#"><i class="fab fa-facebook social" ></i></a>
+                    <a href="#"><i class="fab fa-twitter social" ></i></a>
+                    <a href="#"><i class="fab fa-google-plus-g social" ></i></a>
+                    <a href="#"><i class="fab fa-instagram social" ></i></a>
+                    <a href="#"><i class="fab fa-youtube social" ></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
    
        `)
 }
