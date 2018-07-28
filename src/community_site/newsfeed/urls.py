@@ -1,10 +1,12 @@
 
 from django.contrib import admin
 from django.urls import path
-from . import views
+from .views import (
+    PostListView
+)
 
-app_name = 'newsfeed'
+app_name = 'posts'
 
 urlpatterns = [
-    path(r'', views.newsfeed, name='newsfeed'),
+    path(r'', PostListView.as_view(), name='newsfeed'),
 ]

@@ -17,16 +17,16 @@ class Post(models.Model):
             blank=True, 
             width_field="width_field", 
             height_field="height_field")
-    height_field = models.IntegerField(default=0)
-    width_field = models.IntegerField(default=0)
+    height_field = models.IntegerField(default=800)
+    width_field = models.IntegerField(default=1000)
     draft = models.BooleanField(default=False)
     publish = models.DateField(auto_now=False, auto_now_add=False)
-    read_time =  models.IntegerField(default=0) # models.TimeField(null=True, blank=True) #assume minutes
+    read_time =  models.IntegerField(default=0) 
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
     content_markup = models.TextField(null=True)
     content_markdown = models.TextField(null=True, blank=True)
-    # objects = PostManager()
+   
 
     def __unicode__(self):
         return self.title
@@ -34,21 +34,11 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-    def get_absolute_url(self):
-        return reverse("posts:detail", kwargs={"slug": self.slug})
-
     class Meta:
         ordering = ["-timestamp", "-updated"]
 
     def get_markdown(self):
-        content = self.content
+        content = self.content_markdown
         markdown_text = markdown(content)
         return mark_safe(markdown_text)
-
-
-    # @property
-    # def get_content_type(self):
-    #     instance = self
-    #     content_type = ContentType.objects.get_for_model(instance.__class__)
-    #     return content_type
 
