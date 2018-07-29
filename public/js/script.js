@@ -1,5 +1,5 @@
 function getEvent(done){
-    $.get("", (data) => {
+    $.get("/newsfeed/apinewsfeed", (data) => {
         done(data)
     })
 }
@@ -10,7 +10,7 @@ function refreshEvents(events){
         <div class="container padding">
         <div class="row welcome text-center">
             <div class="col-12">
-                <img src"${event.imageUrl}">
+                <img src"${event.image}">
             </div>
         
             <div class="col-12">
@@ -18,13 +18,12 @@ function refreshEvents(events){
             </div>
             <hr>
             <div class="col-12">
-                <h6 class="text-left ml-5 "> <b>${event.date}</b> </h6>
-                <h6 class="text-left ml-5"> ${even.time}</h6>
-                <p class="lead ml-5">${event.description}</p>
+                <h6 class="text-left ml-5"> ${even.publish}</h6>
+                <p class="lead ml-5">${event.markup}</p>
             </div>
         </div>
     </div>
-    
+
     <!--Contact Us-->
     
     <footer id="contactUs">
