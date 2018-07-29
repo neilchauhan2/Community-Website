@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # third party
     'markdown_deux',
+    'rest_framework',
     # My apps
     'users',
     'newsfeed',
