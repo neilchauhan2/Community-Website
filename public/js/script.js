@@ -1,16 +1,17 @@
 function getEvent(done){
-    $.get("/newsfeed/apinewsfeed", (data) => {
+    $.get("http://localhost:8000/newsfeed/apinewsfeed", (data) => {
         done(data)
     })
 }
 
 function refreshEvents(events){
     events.forEach((event) => {
+
         $("#container-events").append(`
         <div class="container padding">
         <div class="row welcome text-center">
             <div class="col-12">
-                <img src"${event.image}">
+                <img src="${event.image}">
             </div>
         
             <div class="col-12">
@@ -23,30 +24,33 @@ function refreshEvents(events){
             </div>
         </div>
     </div>
-    
-    <!--Contact Us-->
-    
-    <footer id="contactUs">
-    <h3 class="text-center">Contact Us</h3>
-    <p class="text-center">Email or Call us</p>
-    <p class="text-center">Email: <strong>contact@opendev.test</strong></p>
-    <p class="text-center">Phone: <strong>+91-7777777777</strong></p>
-    
-    <div class="container-fluid padding">
-        <div class="row text-center padding">
-            <div class="col-12 padding">
-                <a href="#"><i class="fab fa-facebook social" ></i></a>
-                <a href="#"><i class="fab fa-twitter social" ></i></a>
-                <a href="#"><i class="fab fa-google-plus-g social" ></i></a>
-                <a href="#"><i class="fab fa-instagram social" ></i></a>
-                <a href="#"><i class="fab fa-youtube social" ></i></a>
-            </div>
-        </div>
-    </div>
-    </footer>
         `)
             
     })
+
+    $("#container-events").append(
+        ` <!--Contact Us-->
+    
+        <footer id="contactUs">
+        <h3 class="text-center">Contact Us</h3>
+        <p class="text-center">Email or Call us</p>
+        <p class="text-center">Email: <strong>contact@opendev.test</strong></p>
+        <p class="text-center">Phone: <strong>+91-7777777777</strong></p>
+        
+        <div class="container-fluid padding">
+            <div class="row text-center padding">
+                <div class="col-12 padding">
+                    <a href="#"><i class="fab fa-facebook social" ></i></a>
+                    <a href="#"><i class="fab fa-twitter social" ></i></a>
+                    <a href="#"><i class="fab fa-google-plus-g social" ></i></a>
+                    <a href="#"><i class="fab fa-instagram social" ></i></a>
+                    <a href="#"><i class="fab fa-youtube social" ></i></a>
+                </div>
+            </div>
+        </div>
+        </footer>
+        `
+    )
 }
 
 
