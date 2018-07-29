@@ -187,7 +187,7 @@ function getEvents(){
 
 function getAbout(){
     $("#container-about").append(`
-    <div class="container-fluid padding">
+    <div class="container-fluid padding about">
     <div class="row padding">
     <div class="col-lg-6" >
         <h2>Our Mission</h2>
