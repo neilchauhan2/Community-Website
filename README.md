@@ -8,7 +8,7 @@
 
 `py -3.6 -m venv .venv36`
 
-* Acitivate virtual environment.
+* Activate virtual environment.
 
 `.\.venv36\Scripts\activate`
 
