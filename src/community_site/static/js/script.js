@@ -1,3 +1,55 @@
+function getEvent(done){
+    $.get("http://localhost:8000/newsfeed/apinewsfeed", (data) => {
+        done(data)
+    })
+}
+
+function refreshEvents(events){
+    events.forEach((event) => {
+        $("#container-events").append(`
+        <div class="container padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <img src"${event.image}">
+            </div>
+        
+            <div class="col-12">
+                <h1 class="display-5">${event.title}</h1>
+            </div>
+            <hr>
+            <div class="col-12">
+                <h6 class="text-left ml-5"> ${event.publish}</h6>
+                <p class="lead ml-5">${event.markup}</p>
+            </div>
+        </div>
+    </div>
+    
+    <!--Contact Us-->
+    
+    <footer id="contactUs">
+    <h3 class="text-center">Contact Us</h3>
+    <p class="text-center">Email or Call us</p>
+    <p class="text-center">Email: <strong>contact@opendev.test</strong></p>
+    <p class="text-center">Phone: <strong>+91-7777777777</strong></p>
+    
+    <div class="container-fluid padding">
+        <div class="row text-center padding">
+            <div class="col-12 padding">
+                <a href="#"><i class="fab fa-facebook social" ></i></a>
+                <a href="#"><i class="fab fa-twitter social" ></i></a>
+                <a href="#"><i class="fab fa-google-plus-g social" ></i></a>
+                <a href="#"><i class="fab fa-instagram social" ></i></a>
+                <a href="#"><i class="fab fa-youtube social" ></i></a>
+            </div>
+        </div>
+    </div>
+    </footer>
+        `)
+            
+    })
+}
+
+
 function toggleActive(newActiveTab){
     $(".navbar-nav > li > a").removeClass("active")
     $(`#${newActiveTab}`).addClass("active")
@@ -55,7 +107,6 @@ function getHome () {
            </div>
        </div>
    </div>
-
    <!--Parallax-->
     
    <!--Welcome section-->
@@ -74,7 +125,6 @@ function getHome () {
             </div>
         </div>
     </div>
-
     <!--icons-->
     <div class="container-fluid padding">
         <div class="row text-center padding">
@@ -88,7 +138,6 @@ function getHome () {
            </div>
         </div>
     </div>
-
    
    <!--Emoji-->
    
@@ -115,15 +164,12 @@ function getHome () {
            </div>
        </div>
    </div>
-
    <!--footer-->
-
    <footer id="contactUs">
         <h3 class="text-center">Contact Us</h3>
         <p class="text-center">Email or Call us</p>
         <p class="text-center">Email: <strong>contact@opendev.test</strong></p>
         <p class="text-center">Phone: <strong>+91-7777777777</strong></p>
-
         <div class="container-fluid padding">
             <div class="row text-center padding">
                 <div class="col-12 padding">
@@ -140,15 +186,10 @@ function getHome () {
        `)
 }
 
-function getEvents(){
-    $("#container-events").load("{% url 'newsfeed:list' %}")
-
-   
-}
 
 function getAbout(){
     $("#container-about").append(`
-    <div class="container-fluid padding">
+    <div class="container-fluid padding about">
     <div class="row padding">
     <div class="col-lg-6" >
         <h2>Our Mission</h2>
@@ -159,7 +200,6 @@ function getAbout(){
         We look for people who are passionate about Computer Science, and would love to have them as part of the Communuty!
         </p>
     </div>
-
         <div class="col-lg-6">
             <img src="static/img/balloon.png" class="img-fluid svg" alt="">
         </div>
@@ -168,13 +208,11 @@ function getAbout(){
     </div> 
     
     <!--Contact Us-->
-
 <footer id="contactUs">
 <h3 class="text-center">Contact Us</h3>
 <p class="text-center">Email or Call us</p>
 <p class="text-center">Email: <strong>contact@opendev.test</strong></p>
 <p class="text-center">Phone: <strong>+91-7777777777</strong></p>
-
 <div class="container-fluid padding">
     <div class="row text-center padding">
         <div class="col-12 padding">
@@ -207,17 +245,7 @@ $(function () {
     
     $("#events").click(() => {
         toggleActive("events")
-        getEvents()
+        getEvent(refreshEvents)
     })
     
-    $("#suggestions").click(() => {
-        toggleActive("suggestions")
-        // getSuggestions()
-    })
-    
-    // $("#contact").click(() => {
-    //     toggleActive("contact")
-    //     // getContact()
-    // })
 })
-    
