@@ -39,6 +39,15 @@ html, body{
     padding-bottom: 1rem;
 }
 
+.about h2{
+    margin-top: 0.5rem;  
+    
+}
+
+.about p{
+    padding: 20px 2px;
+}
+
 .jumbotron{
     padding: 1rem;
     border-radius: 0;
@@ -135,7 +144,8 @@ footer{
 }
 
 .svg{
-    height: 80%;
+    padding-top: 0.2rem; 
+    height: 70%;
     width:  100%;
 }
 
