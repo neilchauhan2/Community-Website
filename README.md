@@ -8,6 +8,10 @@
 
 `py -3.6 -m venv .venv36`
 
+* Acitivate virtual environment.
+
+`.\.venv36\Scripts\activate`
+
 * Install dependencies.
 
 `pip install -r requirements.txt`
