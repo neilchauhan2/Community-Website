@@ -5,8 +5,8 @@ from .views import (
     PostListView
 )
 
-app_name = 'posts'
+app_name = 'newsfeed'
 
 urlpatterns = [
-    path(r'', PostListView.as_view(), name='newsfeed'),
+    path(r'', PostListView.as_view(), name='list'),
 ]

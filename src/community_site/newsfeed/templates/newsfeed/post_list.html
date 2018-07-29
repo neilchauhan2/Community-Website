@@ -1,16 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class='col-sm-6 col-sm-offset-3'>
-    <font face="verdana" size="14"><b>Events</b></font>
-    <div class="row">
-        <div class="col-md-12">
-            {% for instance in object_list %}
-                {% if instance.image %}<img src="{{instance.image.url }}" height="70%" width="90%">{% endif %}
-                <font face="verdana" size="3"><p>{{ instance.publish}} | {{ instance.user }}</p></font>
-                <a href='{{instance.get_absolute_url }}'><font face="verdana" size="5">{{ instance.get_markdown|truncatechars_html:80}}</font></p></a>
-            {% endfor %}
-        </div>    
-    </div>
-</div>   
+<div class="cotainer">
+    <div class='col-sm-6 col-sm-offset-3'>
+        <font face="verdana" size="14"><b>Events</b></font>
+        <div class="row">
+            <div class="col-sm-12">
+                {% for instance in object_list %}
+                <a href='{{instance.get_absolute_url }}'><font face="verdana" size="5"><b>{{ instance.title|upper}}</b></font></p></a>
+                    {% if instance.image %}<img src="{{instance.image.url }}" height="70%" width="90%">{% endif %}
+                    <font face="verdana" size="3"><p>{{ instance.publish}} | {{ instance.user }}</p></font>
+                    <a href='{{instance.get_absolute_url }}'><font face="verdana" size="4">{{ instance.get_markdown|truncatechars_html:80}}</font></p></a>
+                {% endfor %}
+            </div>    
+        </div>
+    </div>   
+</div>
 {% endblock content %}
      

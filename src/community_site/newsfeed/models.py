@@ -9,6 +9,11 @@ def upload_location(instance, filename):
     return "%s/%s" %(instance.id, filename)
     
 class Post(models.Model):
+    """ database model for the newsfeed app.
+
+    Important fields: user, title, image, publish, content_markup and content_markdown.
+    """
+    
     user = models.ForeignKey(settings.AUTH_USER_MODEL, default=1,null = True,on_delete=models.SET_NULL)
     title = models.CharField(max_length=120)
     slug = models.SlugField(unique=True)
@@ -38,6 +43,11 @@ class Post(models.Model):
         ordering = ["-timestamp", "-updated"]
 
     def get_markdown(self):
+        """ function that actually converts the content_markdown field to markdown.
+        
+        It uses the markdown_deux package.
+        """
+
         content = self.content_markdown
         markdown_text = markdown(content)
         return mark_safe(markdown_text)
