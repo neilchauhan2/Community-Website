@@ -6,6 +6,7 @@ function getEvent(done){
 
 function refreshEvents(events){
     events.forEach((event) => {
+
         $("#container-events").append(`
         <div class="container padding">
         <div class="row welcome text-center">
