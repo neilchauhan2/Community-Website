@@ -1,5 +1,5 @@
 function getEvent(done){
-    $.get("/newsfeed/apinewsfeed", (data) => {
+    $.get("http://localhost:8000/newsfeed/apinewsfeed", (data) => {
         done(data)
     })
 }
@@ -11,7 +11,7 @@ function refreshEvents(events){
         <div class="container padding">
         <div class="row welcome text-center">
             <div class="col-12">
-                <img src"${event.image}">
+                <img src="${event.image}">
             </div>
         
             <div class="col-12">
