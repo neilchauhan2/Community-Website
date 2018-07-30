@@ -19,7 +19,7 @@ function refreshEvents(events) {
             </div>
             <hr>
             <div class="col-12">
-                <h6 class="text-left ml-5"> ${even.publish}</h6>
+                <h6 class="text-left ml-5"> ${event.publish}</h6>
                 <p class="lead ml-5">${event.markup}</p>
             </div>
         </div>
