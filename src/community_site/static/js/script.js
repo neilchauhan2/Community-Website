@@ -76,7 +76,7 @@ function getHome() {
                    <div class="carousel-caption">
                        <h1 class="display-3">Community Website</h1>
                        <h4>An Open Source Community</h4>
-                       <a href="#" class="btn btn-outline-light btn-lg">Join Now</a>
+                       <a href="https://discord.gg/Zp3sKp" class="btn btn-outline-light btn-lg">Join Now</a>
                    </div>
                </div>
                <div class="carousel-inner">
@@ -104,7 +104,7 @@ function getHome() {
                </div>
    
                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
-                   <a href="" class="btn btn-outline-secondary btn-lg">Join Discord</a>
+                   <a href="https://discord.gg/Zp3sKp" class="btn btn-outline-secondary btn-lg">Join Discord</a>
                </div>
            </div>
        </div>
