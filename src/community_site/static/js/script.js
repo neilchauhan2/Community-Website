@@ -1,10 +1,10 @@
-function getEvent(done){
+function getEvent(done) {
     $.get("http://localhost:8000/newsfeed/apinewsfeed", (data) => {
         done(data)
     })
 }
 
-function refreshEvents(events){
+function refreshEvents(events) {
     events.forEach((event) => {
 
         $("#container-events").append(`
@@ -25,7 +25,7 @@ function refreshEvents(events){
         </div>
     </div>
         `)
-            
+
     })
 
     $("#container-events").append(
@@ -54,15 +54,15 @@ function refreshEvents(events){
 }
 
 
-function toggleActive(newActiveTab){
+function toggleActive(newActiveTab) {
     $(".navbar-nav > li > a").removeClass("active")
     $(`#${newActiveTab}`).addClass("active")
     $(".contents").hide()
     $(`#container-${newActiveTab}`).empty()
-    $(`#container-${newActiveTab}`).show() 
+    $(`#container-${newActiveTab}`).show()
 }
 
-function getHome () {
+function getHome() {
     $("#container-home").append(`
        <div class="contents" id="tab-home">
        <!--Image Slides-->
@@ -74,7 +74,7 @@ function getHome () {
            </ul>
            <div class="carousel-inner">
                <div class="carousel-item active">
-                   <img src="img/img-1.jpg" alt="">
+                   <img src="static/img/img-1.jpg" alt="">
                    <div class="carousel-caption">
                        <h1 class="display-3">Community Website</h1>
                        <h4>An Open Source Community</h4>
@@ -83,12 +83,12 @@ function getHome () {
                </div>
                <div class="carousel-inner">
                    <div class="carousel-item">
-                       <img src="img/img-2.jpg" alt="">
+                       <img src="static/img/img-2.jpg" alt="">
                    </div>
                    
                    <div class="carousel-inner">
                        <div class="carousel-item">
-                           <img src="img/img-3.jpeg" alt="">
+                           <img src="static/img/img-3.jpeg" alt="">
                        </div>
                    </div>
                </div>
@@ -153,19 +153,19 @@ function getHome () {
        <div class="container-fluid padding">
            <div class="row text-center">
                <div class="col-sm-6 col-md-3">
-                   <img src="img/gif/panda.gif" alt="" class="gif">
+                   <img src="static/img/gif/panda.gif" alt="" class="gif">
                </div>
                
                <div class="col-sm-6 col-md-3">
-                   <img src="img/gif/poo.gif" alt="" class="gif">
+                   <img src="static/img/gif/poo.gif" alt="" class="gif">
                </div>
                
                <div class="col-sm-6 col-md-3">
-                   <img src="img/gif/unicorn.gif" alt="" class="gif">
+                   <img src="static/img/gif/unicorn.gif" alt="" class="gif">
                </div>
                
                <div class="col-sm-6 col-md-3">
-                   <img src="img/gif/chicken.gif" alt="" class="gif">
+                   <img src="static/img/gif/chicken.gif" alt="" class="gif">
                </div>
            
            </div>
@@ -197,7 +197,7 @@ function getHome () {
 }
 
 
-function getAbout(){
+function getAbout() {
     $("#container-about").append(`
     <div class="container-fluid padding about">
     <div class="row padding">
@@ -212,7 +212,7 @@ function getAbout(){
     </div>
 
         <div class="col-lg-6">
-            <img src="img/balloon.png" class="img-fluid svg" alt="">
+            <img src="static/img/balloon.png" class="img-fluid svg" alt="">
         </div>
     
     </div>
@@ -250,16 +250,15 @@ $(function () {
         toggleActive("home")
         getHome()
     })
-    
+
     $("#about").click(() => {
         toggleActive("about")
         getAbout()
     })
-    
+
     $("#events").click(() => {
         toggleActive("events")
         getEvent(refreshEvents)
     })
-    
+
 })
-    
