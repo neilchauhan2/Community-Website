@@ -11,16 +11,14 @@ function refreshEvents(events) {
         <div class="container padding">
         <div class="row welcome text-center">
             <div class="col-12">
-                <img src="${event.image}">
+                <img src="${event.image}" height="90%" width="90%">
             </div>
-        
             <div class="col-12">
-                <h1 class="display-5">${event.title}</h1>
+                <h1 class="display-5">${event.title}<h6 class="text-right ml-5"> ${event.publish}</h6></h1>
             </div>
             <hr>
-            <div class="col-12">
-                <h6 class="text-left ml-5"> ${event.publish}</h6>
-                <p class="lead ml-5">${event.markup}</p>
+            <div class="col-12">              
+                <p class="lead ml-5">${event.content_markup}</p>
             </div>
         </div>
     </div>
