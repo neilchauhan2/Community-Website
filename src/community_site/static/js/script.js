@@ -31,9 +31,8 @@ function refreshEvents(events) {
     
         <footer id="contactUs">
         <h3 class="text-center">Contact Us</h3>
-        <p class="text-center">Email or Call us</p>
-        <p class="text-center">Email: <strong>contact@opendev.test</strong></p>
-        <p class="text-center">Phone: <strong>+91-7777777777</strong></p>
+        <p class="text-center">Email us</p>
+        <p class="text-center">Email: <strong>opendevx2@gmail.com</strong></p>
         
         <div class="container-fluid padding">
             <div class="row text-center padding">
