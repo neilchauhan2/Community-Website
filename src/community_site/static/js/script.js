@@ -74,7 +74,7 @@ function getHome() {
                <div class="carousel-item active">
                    <img src="static/img/img-1.jpg" alt="">
                    <div class="carousel-caption">
-                       <h1 class="display-3">Community Website</h1>
+                       <h1 class="display-3">Opendev</h1>
                        <h4>An Open Source Community</h4>
                        <a href="https://discord.gg/Zp3sKp" class="btn btn-outline-light btn-lg">Join Now</a>
                    </div>
@@ -174,9 +174,8 @@ function getHome() {
 
    <footer id="contactUs">
         <h3 class="text-center">Contact Us</h3>
-        <p class="text-center">Email or Call us</p>
-        <p class="text-center">Email: <strong>contact@opendev.test</strong></p>
-        <p class="text-center">Phone: <strong>+91-7777777777</strong></p>
+        <p class="text-center">Email us</p>
+        <p class="text-center">Email: <strong>opendevx2@gmail.com</strong></p>
 
         <div class="container-fluid padding">
             <div class="row text-center padding">
@@ -220,9 +219,8 @@ function getAbout() {
 
 <footer id="contactUs">
 <h3 class="text-center">Contact Us</h3>
-<p class="text-center">Email or Call us</p>
-<p class="text-center">Email: <strong>contact@opendev.test</strong></p>
-<p class="text-center">Phone: <strong>+91-7777777777</strong></p>
+<p class="text-center">Email us</p>
+<p class="text-center">Email: <strong>opendevx2@gmail.com</strong></p>
 
 <div class="container-fluid padding">
     <div class="row text-center padding">
