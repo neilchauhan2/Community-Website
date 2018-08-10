@@ -25,8 +25,10 @@ function refreshEvents(events) {
         `)
 
     })
+}
 
-    $("#container-events").append(
+function getContacts(){
+ $("#container-events").append(
         ` <!--Contact Us-->
     
         <footer id="contactUs">
@@ -49,7 +51,6 @@ function refreshEvents(events) {
         `
     )
 }
-
 
 function toggleActive(newActiveTab) {
     $(".navbar-nav > li > a").removeClass("active")
@@ -254,6 +255,7 @@ $(function () {
     $("#events").click(() => {
         toggleActive("events")
         getEvent(refreshEvents)
+        getContacts()
     })
 
 })
