@@ -1,20 +1,21 @@
 function getEvent(done) {
-    $.get("http://opendevx2.pythonanywhere.com/newsfeed/apinewsfeed", (data) => {
-        done(data)
-    })
+  $.get("http://opendevx2.pythonanywhere.com/newsfeed/apinewsfeed", data => {
+    done(data);
+  });
 }
 
 function refreshEvents(events) {
-    events.forEach((event) => {
-
-        $("#container-events").append(`
+  events.forEach(event => {
+    $("#container-events").append(`
         <div class="container padding">
         <div class="row welcome text-center">
             <div class="col-12">
                 <img src="${event.image}" height="90%" width="90%">
             </div>
             <div class="col-12">
-                <h1 class="display-5">${event.title}<h6 class="text-right ml-5"> ${event.publish}</h6></h1>
+                <h1 class="display-5">${
+                  event.title
+                }<h6 class="text-right ml-5"> ${event.publish}</h6></h1>
             </div>
             <hr>
             <div class="col-12">              
@@ -22,14 +23,13 @@ function refreshEvents(events) {
             </div>
         </div>
     </div>
-        `)
-
-    })
+        `);
+  });
 }
 
-function getContacts(){
- $("#container-events").append(
-        ` <!--Contact Us-->
+function getContacts() {
+  $("#container-events").append(
+    ` <!--Contact Us-->
     
         <footer id="contactUs">
         <h3 class="text-center">Contact Us</h3>
@@ -41,27 +41,25 @@ function getContacts(){
                 <div class="col-12 padding">
                     <a href="#"><i class="fab fa-facebook social" ></i></a>
                     <a href="#"><i class="fab fa-twitter social" ></i></a>
-                    <a href="#"><i class="fab fa-google-plus-g social" ></i></a>
                     <a href="#"><i class="fab fa-instagram social" ></i></a>
-                    <a href="#"><i class="fab fa-youtube social" ></i></a>
                 </div>
             </div>
         </div>
         </footer>
         `
-    )
+  );
 }
 
 function toggleActive(newActiveTab) {
-    $(".navbar-nav > li > a").removeClass("active")
-    $(`#${newActiveTab}`).addClass("active")
-    $(".contents").hide()
-    $(`#container-${newActiveTab}`).empty()
-    $(`#container-${newActiveTab}`).show()
+  $(".navbar-nav > li > a").removeClass("active");
+  $(`#${newActiveTab}`).addClass("active");
+  $(".contents").hide();
+  $(`#container-${newActiveTab}`).empty();
+  $(`#container-${newActiveTab}`).show();
 }
 
 function getHome() {
-    $("#container-home").append(`
+  $("#container-home").append(`
        <div class="contents" id="tab-home">
        <!--Image Slides-->
        <div id="slides" class="carousel slide" data-ride="carousel">
@@ -182,20 +180,17 @@ function getHome() {
                 <div class="col-12 padding">
                     <a href="#"><i class="fab fa-facebook social" ></i></a>
                     <a href="#"><i class="fab fa-twitter social" ></i></a>
-                    <a href="#"><i class="fab fa-google-plus-g social" ></i></a>
                     <a href="#"><i class="fab fa-instagram social" ></i></a>
-                    <a href="#"><i class="fab fa-youtube social" ></i></a>
                 </div>
             </div>
         </div>
     </footer>
    
-       `)
+       `);
 }
 
-
 function getAbout() {
-    $("#container-about").append(`
+  $("#container-about").append(`
     <div class="container-fluid padding about">
     <div class="row padding">
     <div class="col-lg-6" >
@@ -227,35 +222,31 @@ function getAbout() {
         <div class="col-12 padding">
             <a href="#"><i class="fab fa-facebook social" ></i></a>
             <a href="#"><i class="fab fa-twitter social" ></i></a>
-            <a href="#"><i class="fab fa-google-plus-g social" ></i></a>
             <a href="#"><i class="fab fa-instagram social" ></i></a>
-            <a href="#"><i class="fab fa-youtube social" ></i></a>
         </div>
     </div>
 </div>
 </footer>
-    `)
+    `);
 }
 
+$(function() {
+  toggleActive("home");
+  getHome();
 
-$(function () {
-    toggleActive("home")
-    getHome()
+  $("#home").click(() => {
+    toggleActive("home");
+    getHome();
+  });
 
-    $("#home").click(() => {
-        toggleActive("home")
-        getHome()
-    })
+  $("#about").click(() => {
+    toggleActive("about");
+    getAbout();
+  });
 
-    $("#about").click(() => {
-        toggleActive("about")
-        getAbout()
-    })
-
-    $("#events").click(() => {
-        toggleActive("events")
-        getEvent(refreshEvents)
-        getContacts()
-    })
-
-})
+  $("#events").click(() => {
+    toggleActive("events");
+    getEvent(refreshEvents);
+    getContacts();
+  });
+});
