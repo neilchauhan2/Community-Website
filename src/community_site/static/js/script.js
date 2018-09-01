@@ -191,7 +191,10 @@ function getHome() {
 
 function getSuggestions() {
   $("#container-suggestions").append(`
+    <div class="container">
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc79GArb7HsUlI3KjphiIOKFaI3-3_kgFK9g0IdlccwCk_xCw/viewform?embedded=true" width="640" height="816" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </div>
+    
     `);
 }
 
