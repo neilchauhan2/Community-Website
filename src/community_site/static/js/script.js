@@ -189,6 +189,12 @@ function getHome() {
        `);
 }
 
+function getSuggestions() {
+  $("#container-suggestions").append(`
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc79GArb7HsUlI3KjphiIOKFaI3-3_kgFK9g0IdlccwCk_xCw/viewform?embedded=true" width="640" height="816" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    `);
+}
+
 function getAbout() {
   $("#container-about").append(`
     <div class="container-fluid padding about">
@@ -242,6 +248,11 @@ $(function() {
   $("#about").click(() => {
     toggleActive("about");
     getAbout();
+  });
+
+  $("#suggestions").click(() => {
+    toggleActive("suggestions");
+    getSuggestions();
   });
 
   $("#events").click(() => {
