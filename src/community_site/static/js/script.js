@@ -27,29 +27,6 @@ function refreshEvents(events) {
   });
 }
 
-function getContacts() {
-  $("#container-events").append(
-    ` <!--Contact Us-->
-    
-        <footer id="contactUs">
-        <h3 class="text-center">Contact Us</h3>
-        <p class="text-center">Email us</p>
-        <p class="text-center">Email: <strong>opendevx2@gmail.com</strong></p>
-        
-        <div class="container-fluid padding">
-            <div class="row text-center padding">
-                <div class="col-12 padding">
-                    <a href="#"><i class="fab fa-facebook social" ></i></a>
-                    <a href="#"><i class="fab fa-twitter social" ></i></a>
-                    <a href="#"><i class="fab fa-instagram social" ></i></a>
-                </div>
-            </div>
-        </div>
-        </footer>
-        `
-  );
-}
-
 function toggleActive(newActiveTab) {
   $(".navbar-nav > li > a").removeClass("active");
   $(`#${newActiveTab}`).addClass("active");
@@ -167,32 +144,17 @@ function getHome() {
            </div>
        </div>
    </div>
-
-   <!--footer-->
-
-   <footer id="contactUs">
-        <h3 class="text-center">Contact Us</h3>
-        <p class="text-center">Email us</p>
-        <p class="text-center">Email: <strong>opendevx2@gmail.com</strong></p>
-
-        <div class="container-fluid padding">
-            <div class="row text-center padding">
-                <div class="col-12 padding">
-                    <a href="#"><i class="fab fa-facebook social" ></i></a>
-                    <a href="#"><i class="fab fa-twitter social" ></i></a>
-                    <a href="#"><i class="fab fa-instagram social" ></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-   
        `);
 }
 
 function getSuggestions() {
   $("#container-suggestions").append(`
     <div class="container">
+    <div class="row" >
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc79GArb7HsUlI3KjphiIOKFaI3-3_kgFK9g0IdlccwCk_xCw/viewform?embedded=true" width="640" height="816" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </div>
+    </div>
     </div>
     
     `);
@@ -219,23 +181,6 @@ function getAbout() {
     </div>
     </div> 
     
-    <!--Contact Us-->
-
-<footer id="contactUs">
-<h3 class="text-center">Contact Us</h3>
-<p class="text-center">Email us</p>
-<p class="text-center">Email: <strong>opendevx2@gmail.com</strong></p>
-
-<div class="container-fluid padding">
-    <div class="row text-center padding">
-        <div class="col-12 padding">
-            <a href="#"><i class="fab fa-facebook social" ></i></a>
-            <a href="#"><i class="fab fa-twitter social" ></i></a>
-            <a href="#"><i class="fab fa-instagram social" ></i></a>
-        </div>
-    </div>
-</div>
-</footer>
     `);
 }
 
@@ -261,6 +206,5 @@ $(function() {
   $("#events").click(() => {
     toggleActive("events");
     getEvent(refreshEvents);
-    getContacts();
   });
 });
