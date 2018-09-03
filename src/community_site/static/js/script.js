@@ -1,5 +1,5 @@
 function getEvent(done) {
-  $.get("http://opendevx2.pythonanywhere.com/newsfeed/apinewsfeed", data => {
+  $.get("https://opendevx2.pythonanywhere.com/newsfeed/apinewsfeed", data => {
     done(data);
   });
 }
