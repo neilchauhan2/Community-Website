@@ -4,11 +4,11 @@
 
 # Getting started
 
-* Create virtual environment.
+* Create a virtual environment.
 
 `py -3.6 -m venv .venv36`
 
-* Activate virtual environment.
+* Activate the virtual environment.
 
 `.\.venv36\Scripts\activate`
 
