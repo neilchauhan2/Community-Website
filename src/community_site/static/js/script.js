@@ -54,16 +54,11 @@ function getHome() {
                        <a href="https://discord.gg/Zp3sKp" class="btn btn-outline-light btn-lg">Join Now</a>
                    </div>
                </div>
-               <div class="carousel-inner">
-                   <div class="carousel-item">
-                       <img src="static/img/img-2.jpg" alt="">
-                   </div>
-                   
-                   <div class="carousel-inner">
-                       <div class="carousel-item">
-                           <img src="static/img/img-3.jpeg" alt="">
-                       </div>
-                   </div>
+               <div class="carousel-item">
+                   <img src="static/img/img-2.jpg" alt="">
+               </div>
+               <div class="carousel-item">
+                   <img src="static/img/img-3.jpeg" alt="">
                </div>
            </div>
        </div>
