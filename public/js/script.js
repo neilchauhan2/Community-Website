@@ -1,13 +1,12 @@
-function getEvent(done){
-    $.get("http://localhost:8000/newsfeed/apinewsfeed", (data) => {
-        done(data)
-    })
+function getEvent(done) {
+  $.get("http://localhost:8000/newsfeed/apinewsfeed", data => {
+    done(data);
+  });
 }
 
-function refreshEvents(events){
-    events.forEach((event) => {
-
-        $("#container-events").append(`
+function refreshEvents(events) {
+  events.forEach(event => {
+    $("#container-events").append(`
         <div class="container padding">
         <div class="row welcome text-center">
             <div class="col-12">
@@ -24,12 +23,11 @@ function refreshEvents(events){
             </div>
         </div>
     </div>
-        `)
-            
-    })
+        `);
+  });
 
-    $("#container-events").append(
-        ` <!--Contact Us-->
+  $("#container-events").append(
+    ` <!--Contact Us-->
     
         <footer id="contactUs">
         <h3 class="text-center">Contact Us</h3>
@@ -50,20 +48,19 @@ function refreshEvents(events){
         </div>
         </footer>
         `
-    )
+  );
 }
 
-
-function toggleActive(newActiveTab){
-    $(".navbar-nav > li > a").removeClass("active")
-    $(`#${newActiveTab}`).addClass("active")
-    $(".contents").hide()
-    $(`#container-${newActiveTab}`).empty()
-    $(`#container-${newActiveTab}`).show() 
+function toggleActive(newActiveTab) {
+  $(".navbar-nav > li > a").removeClass("active");
+  $(`#${newActiveTab}`).addClass("active");
+  $(".contents").hide();
+  $(`#container-${newActiveTab}`).empty();
+  $(`#container-${newActiveTab}`).show();
 }
 
-function getHome () {
-    $("#container-home").append(`
+function getHome() {
+  $("#container-home").append(`
        <div class="contents" id="tab-home">
        <!--Image Slides-->
        <div id="slides" class="carousel slide" data-ride="carousel">
@@ -193,12 +190,11 @@ function getHome () {
         </div>
     </footer>
    
-       `)
+       `);
 }
 
-
-function getAbout(){
-    $("#container-about").append(`
+function getAbout() {
+  $("#container-about").append(`
     <div class="container-fluid padding about">
     <div class="row padding">
     <div class="col-lg-6" >
@@ -238,28 +234,25 @@ function getAbout(){
     </div>
 </div>
 </footer>
-    `)
+    `);
 }
 
+$(function() {
+  toggleActive("home");
+  getHome();
 
-$(function () {
-    toggleActive("home")
-    getHome()
+  $("#home").click(() => {
+    toggleActive("home");
+    getHome();
+  });
 
-    $("#home").click(() => {
-        toggleActive("home")
-        getHome()
-    })
-    
-    $("#about").click(() => {
-        toggleActive("about")
-        getAbout()
-    })
-    
-    $("#events").click(() => {
-        toggleActive("events")
-        getEvent(refreshEvents)
-    })
-    
-})
-    
+  $("#about").click(() => {
+    toggleActive("about");
+    getAbout();
+  });
+
+  $("#events").click(() => {
+    toggleActive("events");
+    getEvent(refreshEvents);
+  });
+});
