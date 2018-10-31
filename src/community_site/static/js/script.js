@@ -116,29 +116,29 @@ function getHome() {
    
    <!--Emoji-->
    
-//    <button class="fun btn btn-outline-secondary" data-toggle="collapse" data-target="#emoji">Click for Fun</button>
-//    <div id="emoji" class="collapse">
-//        <div class="container-fluid padding">
-//            <div class="row text-center">
-//                <div class="col-sm-6 col-md-3">
-//                    <img src="static/img/gif/panda.gif" alt="" class="gif">
-//                </div>
+ <!--  <button class="fun btn btn-outline-secondary" data-toggle="collapse" data-target="#emoji">Click for Fun</button>
+   <div id="emoji" class="collapse">
+       <div class="container-fluid padding">
+           <div class="row text-center">
+               <div class="col-sm-6 col-md-3">
+                   <img src="static/img/gif/panda.gif" alt="" class="gif">
+               </div>
                
-//                <div class="col-sm-6 col-md-3">
-//                    <img src="static/img/gif/poo.gif" alt="" class="gif">
-//                </div>
+               <div class="col-sm-6 col-md-3">
+                   <img src="static/img/gif/poo.gif" alt="" class="gif">
+               </div>
                
-//                <div class="col-sm-6 col-md-3">
-//                    <img src="static/img/gif/unicorn.gif" alt="" class="gif">
-//                </div>
+               <div class="col-sm-6 col-md-3">
+                   <img src="static/img/gif/unicorn.gif" alt="" class="gif">
+               </div>
                
-//                <div class="col-sm-6 col-md-3">
-//                    <img src="static/img/gif/chicken.gif" alt="" class="gif">
-//                </div>
+               <div class="col-sm-6 col-md-3">
+                   <img src="static/img/gif/chicken.gif" alt="" class="gif">
+               </div>
            
-//            </div>
-//        </div>
-//    </div>
+           </div>
+       </div>
+   </div> -->
        `);
 }
 
