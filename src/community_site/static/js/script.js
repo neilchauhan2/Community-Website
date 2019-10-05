@@ -4,7 +4,7 @@ function getEvent(done) {
   });
 }
 
-function refreshEvents(events) {
+const refreshEvents = (events) => {
   events.forEach(event => {
     $("#container-events").append(`
         <div class="container padding">
@@ -27,7 +27,7 @@ function refreshEvents(events) {
   });
 }
 
-function toggleActive(newActiveTab) {
+const toggleActive = (newActiveTab) => {
   $(".navbar-nav > li > a").removeClass("active");
   $(`#${newActiveTab}`).addClass("active");
   $(".contents").hide();
@@ -35,7 +35,7 @@ function toggleActive(newActiveTab) {
   $(`#container-${newActiveTab}`).show();
 }
 
-function getHome() {
+const getHome = () => {
   $("#container-home").append(`
        <div class="contents" id="tab-home">
        <!--Image Slides-->
@@ -142,7 +142,7 @@ function getHome() {
        `);
 }
 
-function getSuggestions() {
+const getSuggestions = () => {
   $("#container-suggestions").append(`
     <div class="container">
     <div class="row" >
@@ -155,7 +155,7 @@ function getSuggestions() {
     `);
 }
 
-function getAbout() {
+const getAbout = () => {
   $("#container-about").append(`
     <div class="container-fluid padding about">
     <div class="row padding">
