@@ -1,8 +1,8 @@
-# Community-Website
+# An Amazing Community-Website...
 ## <a href="https://opendevx2.pythonanywhere.com/">https://opendevx2.pythonanywhere.com</a>
-### A website for the community
+### A website made for the community...
 
-# Getting started
+# Simple To Getting start...
 
 * Create virtual environment.
 
@@ -16,7 +16,7 @@
 
 `pip install -r requirements.txt`
 
-# Starting the server
+# Starting the server...
 cd `src\community_website\`
 
 `python manage.py makemigrations`
