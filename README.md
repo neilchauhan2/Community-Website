@@ -2,7 +2,7 @@
 ## <a href="https://opendevx2.pythonanywhere.com/">https://opendevx2.pythonanywhere.com</a>
 ### A website for the community
 
-# Getting started
+# Get started
 
 * Create virtual environment.
 
